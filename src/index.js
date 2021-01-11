@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Greeting from './Greeting';
+import App from './App';
+import Clock from './Clock';
+
 import './index.css';
 
-const name = "Leia Organa";
+// const name = "Leia Organa";
 const url = "http://placekitten.com/480/480";
 const user = {
   firstName: "Luke",
@@ -34,7 +38,10 @@ function getUserGreeting(user) {
 
 const element = (
   <div className="container">
-    {getUserGreeting(user)}
+    <Greeting name="Leia Organa" anotherProp="someValue" />
+    <Greeting name="Luke Skywalker" />
+    <Greeting name="Rey" />
+    {/*getUserGreeting(user)*/}
     <img src={url} alt="Kitty" />
     <p>Email: {getUserEmailLink(user)}</p>
   </div>
@@ -44,6 +51,15 @@ console.log(element);
 
 const appRoot = document.getElementById("root");
 ReactDOM.render(
-  element,
+  <App />,
   appRoot
 );
+// function tick() {
+//   console.log("tick");
+//   ReactDOM.render(
+//     <Clock />,
+//     appRoot
+//   );
+// }
+//
+// setInterval(tick, 1000);

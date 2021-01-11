@@ -3,3 +3,10 @@
   padding: 20px;
   border: 1px solid dimgray;
 }
+
+.card {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid dimgray;
+  border-radius: 4px;
+}
